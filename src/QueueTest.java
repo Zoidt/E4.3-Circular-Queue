@@ -5,7 +5,9 @@ import org.junit.jupiter.api.Test;
 
 public class QueueTest {
 
-    public static final int CAPACITY = 20;
+    public static final int CAPACITY = 5;
+
+
     private IntQueue queue;
 
     @BeforeEach
@@ -53,7 +55,7 @@ public class QueueTest {
         for (int i = 0; i < CAPACITY; i++)
             queue.enqueue(i);
         for (int i = 0; i < CAPACITY; i++)
-            assertEquals(String.valueOf(i), queue.dequeue());
+            assertEquals(Integer.valueOf(i), queue.dequeue());
     }
 
     @Test
